@@ -1,0 +1,6 @@
+{
+  "device": "mps",
+  "finite_gradients": true,
+  "purpose": "Execution only, not performance results",
+  "finished_at": "2026-11-16T09:20:01.946406+00:00"
+}

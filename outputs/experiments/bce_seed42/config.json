@@ -1,0 +1,41 @@
+{
+  "loss": "bce",
+  "output": "/Users/chenyanyi/Desktop/AIDA\u5c0f\u7ec4\u4f5c\u4e1a/outputs/experiments/bce_seed42",
+  "epochs": 10,
+  "patience": 3,
+  "batch_size": 8,
+  "workers": 2,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "seed": 42,
+  "device": "mps",
+  "gamma": 2.0,
+  "alpha": 0.25,
+  "split_sha256": {
+    "train": "ccfe25c7e7bd5935bb19ae583a218ca271bcf012d31886bf4ffdaefdf89488df",
+    "val": "00699426f7ccbd4eb142c0f0be4e71e1c8370b5527aa4cd19638544cea27e908",
+    "test": "4633332bad09df8c97a0e24bf45361537f593a7ba93d637d58644be6a22c0f1d"
+  },
+  "pretrained_weights": "IMAGENET1K_V2",
+  "source_sha256": {
+    "src/__init__.py": "4bfc1e7e6d7659199bc0a60181aaf505e66341020cc1b3516c85f70c9c96d43f",
+    "src/dataset.py": "a4924af19c90830b4e44e58c41ae6b4d3cb9409cf237357a793782de5a970055",
+    "src/losses.py": "44e4e5dcb5ea29b275e43f9014f20d8ae76066d5aca5912312e547cdb842dbc6",
+    "src/metrics.py": "4144ed9605b7e4bfbeacd997d191fb80ed5c810c89be12588193a295453b8b94",
+    "src/model.py": "1fbeed45e81c0299cb9a604ed68867d651af25a86c3d1b51731d02110d83a5fa",
+    "src/train.py": "6733ddb29e7021fc04eefdc474361b6e2f97b1019f5ed6f3c4d9068c8e91cfd9"
+  },
+  "architecture": "resnet50",
+  "image_size": 224,
+  "preprocessing": "JPEG draft to >=448; RGB; aspect-preserving contain/pad 224; ImageNet normalization",
+  "train_augmentation": "horizontal/vertical flip p=0.5; rotation +/-15; brightness/contrast/saturation 0.1",
+  "train_images": 23318,
+  "val_images": 4620,
+  "train_positive_weight": 55.18795180722891,
+  "torch_version": "2.7.1",
+  "torchvision_version": "0.22.1",
+  "python": "3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-14.5-arm64-arm-64bit-Mach-O",
+  "test_evaluated": false,
+  "reproducibility": "Fixed seeds; MPS bitwise reproducibility is not guaranteed"
+}

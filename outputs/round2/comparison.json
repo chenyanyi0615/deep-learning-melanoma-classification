@@ -1,0 +1,369 @@
+{
+  "validation_only": true,
+  "new_independent_test": false,
+  "test_inference_performed": false,
+  "results": [
+    {
+      "name": "BCE (round 1)",
+      "round": 1,
+      "policy": "default",
+      "auroc": 0.8607121861090115,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": 0.0,
+      "f1": 0.0,
+      "confusion_matrix": [
+        [
+          4536,
+          0
+        ],
+        [
+          84,
+          0
+        ]
+      ],
+      "threshold": 0.5,
+      "zero_division": 0
+    },
+    {
+      "name": "BCE (round 1)",
+      "round": 1,
+      "policy": "validation_selected",
+      "auroc": 0.8607121861090115,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.6772486772486772,
+      "precision": 0.04935064935064935,
+      "f1": 0.09359605911330049,
+      "confusion_matrix": [
+        [
+          3072,
+          1464
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.004005848430097103,
+      "zero_division": 0
+    },
+    {
+      "name": "Weighted BCE (round 1)",
+      "round": 1,
+      "policy": "default",
+      "auroc": 0.8623630007558579,
+      "sensitivity": 0.9166666666666666,
+      "specificity": 0.6626984126984127,
+      "precision": 0.04791537025513379,
+      "f1": 0.09107037256061502,
+      "confusion_matrix": [
+        [
+          3006,
+          1530
+        ],
+        [
+          7,
+          77
+        ]
+      ],
+      "threshold": 0.5,
+      "zero_division": 0
+    },
+    {
+      "name": "Weighted BCE (round 1)",
+      "round": 1,
+      "policy": "validation_selected",
+      "auroc": 0.8623630007558579,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.6834215167548501,
+      "precision": 0.05026455026455026,
+      "f1": 0.09523809523809523,
+      "confusion_matrix": [
+        [
+          3100,
+          1436
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.5129998922348022,
+      "zero_division": 0
+    },
+    {
+      "name": "Focal (round 1)",
+      "round": 1,
+      "policy": "default",
+      "auroc": 0.844209288653733,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": 0.0,
+      "f1": 0.0,
+      "confusion_matrix": [
+        [
+          4536,
+          0
+        ],
+        [
+          84,
+          0
+        ]
+      ],
+      "threshold": 0.5,
+      "zero_division": 0
+    },
+    {
+      "name": "Focal (round 1)",
+      "round": 1,
+      "policy": "validation_selected",
+      "auroc": 0.844209288653733,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.593915343915344,
+      "precision": 0.03962460896767466,
+      "f1": 0.07592407592407592,
+      "confusion_matrix": [
+        [
+          2694,
+          1842
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.079363614320755,
+      "zero_division": 0
+    },
+    {
+      "name": "balanced_bce_224_seed42",
+      "round": 2,
+      "epoch": 3,
+      "policy": "default",
+      "auroc": 0.8558857184849247,
+      "sensitivity": 0.20238095238095238,
+      "specificity": 0.9819223985890653,
+      "precision": 0.1717171717171717,
+      "f1": 0.18579234972677597,
+      "confusion_matrix": [
+        [
+          4454,
+          82
+        ],
+        [
+          67,
+          17
+        ]
+      ],
+      "threshold": 0.5,
+      "zero_division": 0
+    },
+    {
+      "name": "balanced_bce_224_seed42",
+      "round": 2,
+      "epoch": 3,
+      "policy": "validation_selected",
+      "auroc": 0.8558857184849247,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.6723985890652557,
+      "precision": 0.04865556978233035,
+      "f1": 0.09234507897934387,
+      "confusion_matrix": [
+        [
+          3050,
+          1486
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 7.206668669823557e-05,
+      "zero_division": 0
+    },
+    {
+      "name": "positive_focal_224_seed42",
+      "round": 2,
+      "epoch": 4,
+      "policy": "default",
+      "auroc": 0.8793304358780549,
+      "sensitivity": 0.14285714285714285,
+      "specificity": 0.9786155202821869,
+      "precision": 0.11009174311926606,
+      "f1": 0.12435233160621761,
+      "confusion_matrix": [
+        [
+          4439,
+          97
+        ],
+        [
+          72,
+          12
+        ]
+      ],
+      "threshold": 0.5,
+      "zero_division": 0
+    },
+    {
+      "name": "positive_focal_224_seed42",
+      "round": 2,
+      "epoch": 4,
+      "policy": "validation_selected",
+      "auroc": 0.8793304358780549,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.7407407407407407,
+      "precision": 0.06070287539936102,
+      "f1": 0.11377245508982035,
+      "confusion_matrix": [
+        [
+          3360,
+          1176
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.2916650176048279,
+      "zero_division": 0
+    },
+    {
+      "name": "stable_bce_224_seed42",
+      "round": 2,
+      "epoch": 4,
+      "policy": "default",
+      "auroc": 0.8955840052070211,
+      "sensitivity": 0.011904761904761904,
+      "specificity": 0.9995590828924162,
+      "precision": 0.3333333333333333,
+      "f1": 0.022988505747126436,
+      "confusion_matrix": [
+        [
+          4534,
+          2
+        ],
+        [
+          83,
+          1
+        ]
+      ],
+      "threshold": 0.5,
+      "zero_division": 0
+    },
+    {
+      "name": "stable_bce_224_seed42",
+      "round": 2,
+      "epoch": 4,
+      "policy": "validation_selected",
+      "auroc": 0.8955840052070211,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.7705026455026455,
+      "precision": 0.06803939122649955,
+      "f1": 0.12656119900083265,
+      "confusion_matrix": [
+        [
+          3495,
+          1041
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.009880644269287586,
+      "zero_division": 0
+    },
+    {
+      "name": "stable_bce_224_seed43",
+      "round": 2,
+      "epoch": 3,
+      "policy": "default",
+      "auroc": 0.8777846014949191,
+      "sensitivity": 0.0,
+      "specificity": 0.9997795414462081,
+      "precision": 0.0,
+      "f1": 0.0,
+      "confusion_matrix": [
+        [
+          4535,
+          1
+        ],
+        [
+          84,
+          0
+        ]
+      ],
+      "threshold": 0.5,
+      "zero_division": 0
+    },
+    {
+      "name": "stable_bce_224_seed43",
+      "round": 2,
+      "epoch": 3,
+      "policy": "validation_selected",
+      "auroc": 0.8777846014949191,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.7447089947089947,
+      "precision": 0.06158833063209076,
+      "f1": 0.11532625189681335,
+      "confusion_matrix": [
+        [
+          3378,
+          1158
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.009916191920638084,
+      "zero_division": 0
+    },
+    {
+      "name": "stable_bce_320_seed42",
+      "round": 2,
+      "epoch": 4,
+      "policy": "default",
+      "auroc": 0.8936182497690435,
+      "sensitivity": 0.011904761904761904,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 0.023529411764705882,
+      "confusion_matrix": [
+        [
+          4536,
+          0
+        ],
+        [
+          83,
+          1
+        ]
+      ],
+      "threshold": 0.5,
+      "zero_division": 0
+    },
+    {
+      "name": "stable_bce_320_seed42",
+      "round": 2,
+      "epoch": 4,
+      "policy": "validation_selected",
+      "auroc": 0.8936182497690435,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.7184744268077602,
+      "precision": 0.05617147080561715,
+      "f1": 0.1057759220598469,
+      "confusion_matrix": [
+        [
+          3259,
+          1277
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.005544574465602636,
+      "zero_division": 0
+    }
+  ]
+}

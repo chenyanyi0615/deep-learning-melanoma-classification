@@ -1,0 +1,11 @@
+archive_attribution,images,patients,melanoma,benign,split
+"Department of Dermatology, Hospital Clínic de Barcelona",5406,259,127,5279,train
+Memorial Sloan Kettering Cancer Center,7830,359,156,7674,train
+"Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital, Pascale Guitera",1278,306,94,1184,train
+"The University of Queensland Diamantina Institute, The University of Queensland, Dermatology Research Centre",5700,212,5,5695,train
+"ViDIR Group, Department of Dermatology, Medical University of Vienna",3104,303,33,3071,train
+"Department of Dermatology, Hospital Clínic de Barcelona",933,49,30,903,val
+Memorial Sloan Kettering Cancer Center,1688,87,28,1660,val
+"Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital, Pascale Guitera",326,67,22,304,val
+"The University of Queensland Diamantina Institute, The University of Queensland, Dermatology Research Centre",1152,53,1,1151,val
+"ViDIR Group, Department of Dermatology, Medical University of Vienna",521,52,3,518,val

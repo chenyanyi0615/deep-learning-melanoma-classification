@@ -1,0 +1,13 @@
+{
+  "name": "stable_bce_320_seed42",
+  "loss": "bce",
+  "sample_positive_fraction": null,
+  "seed": 42,
+  "image_size": 320,
+  "epochs": 6,
+  "minutes_cap": 120,
+  "deadline_unix": 1794606723.573617,
+  "train_manifest_sha256": "ccfe25c7e7bd5935bb19ae583a218ca271bcf012d31886bf4ffdaefdf89488df",
+  "val_manifest_sha256": "00699426f7ccbd4eb142c0f0be4e71e1c8370b5527aa4cd19638544cea27e908",
+  "checkpoint_selection": "specificity at validation sensitivity >=90%, AUROC tie-breaker"
+}

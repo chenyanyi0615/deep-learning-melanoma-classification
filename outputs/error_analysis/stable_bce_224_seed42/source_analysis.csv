@@ -1,0 +1,6 @@
+group,value,images,patients,benign,melanoma,tn,fp,fn,tp,fp_patients,melanoma_patients,false_positive_rate,sensitivity,source,train_images,train_melanoma
+archive_attribution,"Department of Dermatology, Hospital Clínic de Barcelona",933,49,903,30,575,328,3,27,42,23,0.3632336655592469,0.9,Barcelona,5406,127
+archive_attribution,Memorial Sloan Kettering Cancer Center,1688,87,1660,28,1262,398,1,27,81,22,0.2397590361445783,0.9642857142857144,MSK,7830,156
+archive_attribution,"Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital, Pascale Guitera",326,67,304,22,76,228,0,22,66,15,0.75,1.0,Sydney,1278,94
+archive_attribution,"The University of Queensland Diamantina Institute, The University of Queensland, Dermatology Research Centre",1152,53,1151,1,1129,22,1,0,14,1,0.0191138140747176,0.0,Queensland,5700,5
+archive_attribution,"ViDIR Group, Department of Dermatology, Medical University of Vienna",521,52,518,3,453,65,3,0,29,3,0.1254826254826254,0.0,Vienna,3104,33

@@ -1,0 +1,61 @@
+{
+  "budget_start_utc": "2026-11-13T14:24:32+00:00",
+  "absolute_deadline_unix": 1794623072.0,
+  "training_deadline_unix": 1794621272.0,
+  "hours_total": 12,
+  "initial_weekly_used_percent": 22,
+  "initial_weekly_remaining_percent": 78,
+  "language_model_usage_guard_remaining_percent": 55,
+  "no_paid_services": true,
+  "no_new_datasets": true,
+  "test_set_used_for_selection": false,
+  "primary_metric": "validation specificity at sensitivity >=0.90; AUROC tie-breaker",
+  "note": "Second-round development only. Original test set already used; no claim of a fresh independent test.",
+  "runs": [
+    {
+      "name": "stable_bce_224_seed42",
+      "loss": "bce",
+      "sample_positive_fraction": null,
+      "seed": 42,
+      "image_size": 224,
+      "epochs": 8,
+      "minutes_cap": 135
+    },
+    {
+      "name": "balanced_bce_224_seed42",
+      "loss": "bce",
+      "sample_positive_fraction": 0.25,
+      "seed": 42,
+      "image_size": 224,
+      "epochs": 8,
+      "minutes_cap": 135
+    },
+    {
+      "name": "positive_focal_224_seed42",
+      "loss": "focal",
+      "alpha": 0.9,
+      "gamma": 2.0,
+      "sample_positive_fraction": null,
+      "seed": 42,
+      "image_size": 224,
+      "epochs": 8,
+      "minutes_cap": 135
+    }
+  ],
+  "adaptive_followups": [
+    "Repeat the validation-best 224 configuration with seed 43 (max 120 minutes)",
+    "If at least 60 minutes remain, try validation-best configuration at 320 pixels (max 120 minutes, 6 epochs)"
+  ],
+  "training_changes": {
+    "backbone": "ResNet-50 ImageNet V2; train head and layer4 only",
+    "batch_norm": "freeze running mean/variance and affine parameters",
+    "head_warmup_epochs": 1,
+    "head_warmup_lr": 0.001,
+    "head_lr": 0.0003,
+    "layer4_lr": 3e-05,
+    "schedule": "cosine decay after head-only warmup",
+    "batch_size": 8,
+    "workers": 2,
+    "early_stopping_patience": 3
+  }
+}

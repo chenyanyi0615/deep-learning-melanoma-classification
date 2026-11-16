@@ -1,0 +1,9 @@
+{
+  "verified_completed_runs": 5,
+  "verified_complete_epochs": 32,
+  "queue_elapsed_hours": 6.820503964444445,
+  "finished_at": "2026-11-13T21:23:18.980690+00:00",
+  "within_12_hour_budget": true,
+  "weekly_remaining_percent_at_delivery": 77,
+  "independent_test_performed": false
+}

@@ -1,0 +1,41 @@
+{
+  "epoch": 4,
+  "default": {
+    "auroc": 0.8972348198538673,
+    "sensitivity": 0.011904761904761904,
+    "specificity": 0.9995590828924162,
+    "precision": 0.3333333333333333,
+    "f1": 0.022988505747126436,
+    "confusion_matrix": [
+      [
+        4534,
+        2
+      ],
+      [
+        83,
+        1
+      ]
+    ],
+    "threshold": 0.5,
+    "zero_division": 0
+  },
+  "validation_selected": {
+    "auroc": 0.8972348198538673,
+    "sensitivity": 0.9047619047619048,
+    "specificity": 0.7921075837742504,
+    "precision": 0.0745829244357213,
+    "f1": 0.13780598368087035,
+    "confusion_matrix": [
+      [
+        3593,
+        943
+      ],
+      [
+        8,
+        76
+      ]
+    ],
+    "threshold": 0.011566944420337677,
+    "zero_division": 0
+  }
+}

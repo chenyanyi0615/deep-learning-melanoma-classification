@@ -1,0 +1,40 @@
+{
+  "validation_only": true,
+  "new_independent_test": false,
+  "new_inference": false,
+  "new_training": false,
+  "threshold": 0.009880644269287586,
+  "metrics": {
+    "auroc": 0.8955840052070211,
+    "sensitivity": 0.9047619047619048,
+    "specificity": 0.7705026455026455,
+    "precision": 0.06803939122649955,
+    "f1": 0.12656119900083265,
+    "confusion_matrix": [
+      [
+        3495,
+        1041
+      ],
+      [
+        8,
+        76
+      ]
+    ],
+    "threshold": 0.009880644269287586,
+    "zero_division": 0
+  },
+  "validation_images": 4620,
+  "validation_patients": 308,
+  "melanoma_patients": 64,
+  "fn_patients": 8,
+  "fp_patients": 232,
+  "top5_patients_fp": 115,
+  "top10_patients_fp": 195,
+  "top5_patients_benign_images": 197,
+  "missing_benign_diagnosis": 3861,
+  "fp_unknown_diagnosis": 862,
+  "actual_pixel_lesion_size_measured": false,
+  "demographic_results_unadjusted": true,
+  "protected_files_unchanged": true,
+  "created_at": "2026-11-16T07:13:37.430193+00:00"
+}

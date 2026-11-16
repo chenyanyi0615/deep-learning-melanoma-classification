@@ -1,0 +1,15 @@
+{
+  "purpose": "execution checks only; not performance results",
+  "results": [
+    {
+      "warmup": true,
+      "finite_gradients": true,
+      "trainable_parameters": 2049
+    },
+    {
+      "warmup": false,
+      "finite_gradients": true,
+      "trainable_parameters": 14944257
+    }
+  ]
+}

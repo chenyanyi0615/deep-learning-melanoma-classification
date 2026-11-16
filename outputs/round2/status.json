@@ -1,0 +1,119 @@
+{
+  "state": "completed",
+  "phase": "finished",
+  "started_at": "2026-11-13T14:34:05.166418+00:00",
+  "hard_deadline_unix": 1794623072.0,
+  "runs": [
+    {
+      "name": "stable_bce_224_seed42",
+      "status": {
+        "state": "completed",
+        "phase": "finished",
+        "started_at": "2026-11-13T14:34:09.554621+00:00",
+        "pid": 859,
+        "epoch": 7,
+        "batch": 2915,
+        "total_batches": 2915,
+        "updated_at": "2026-11-13T16:12:16.846475+00:00",
+        "train_loss": 0.04200958365504025,
+        "images_per_second": 32.50630118267374,
+        "completed_epochs": 7,
+        "best_specificity_at_target": 0.7705026455026455,
+        "stop_reason": "early_stopping",
+        "finished_at": "2026-11-13T16:12:16.847796+00:00"
+      },
+      "has_completed_epoch": true
+    },
+    {
+      "name": "balanced_bce_224_seed42",
+      "status": {
+        "state": "completed",
+        "phase": "finished",
+        "started_at": "2026-11-13T16:12:34.339539+00:00",
+        "pid": 2790,
+        "epoch": 6,
+        "batch": 2915,
+        "total_batches": 2915,
+        "updated_at": "2026-11-13T17:34:30.172413+00:00",
+        "train_loss": 0.011011074267395369,
+        "images_per_second": 33.058066859852595,
+        "completed_epochs": 6,
+        "best_specificity_at_target": 0.6723985890652557,
+        "stop_reason": "early_stopping",
+        "finished_at": "2026-11-13T17:34:30.174184+00:00"
+      },
+      "has_completed_epoch": true
+    },
+    {
+      "name": "positive_focal_224_seed42",
+      "status": {
+        "state": "completed",
+        "phase": "finished",
+        "started_at": "2026-11-13T17:34:48.978555+00:00",
+        "pid": 5249,
+        "epoch": 7,
+        "batch": 2915,
+        "total_batches": 2915,
+        "updated_at": "2026-11-13T18:51:48.414322+00:00",
+        "train_loss": 0.005519871085297317,
+        "images_per_second": 45.16563953050994,
+        "completed_epochs": 7,
+        "best_specificity_at_target": 0.7407407407407407,
+        "stop_reason": "early_stopping",
+        "finished_at": "2026-11-13T18:51:48.415113+00:00"
+      },
+      "has_completed_epoch": true
+    },
+    {
+      "name": "stable_bce_224_seed43",
+      "status": {
+        "state": "completed",
+        "phase": "finished",
+        "started_at": "2026-11-13T18:52:07.036796+00:00",
+        "pid": 6576,
+        "epoch": 6,
+        "batch": 2915,
+        "total_batches": 2915,
+        "updated_at": "2026-11-13T19:51:49.519901+00:00",
+        "train_loss": 0.04808003012984301,
+        "images_per_second": 48.260376137203544,
+        "completed_epochs": 6,
+        "best_specificity_at_target": 0.7447089947089947,
+        "stop_reason": "early_stopping",
+        "finished_at": "2026-11-13T19:51:49.520714+00:00"
+      },
+      "has_completed_epoch": true
+    },
+    {
+      "name": "stable_bce_320_seed42",
+      "status": {
+        "state": "completed",
+        "phase": "finished",
+        "started_at": "2026-11-13T19:52:06.975160+00:00",
+        "pid": 7451,
+        "epoch": 6,
+        "batch": 2915,
+        "total_batches": 2915,
+        "updated_at": "2026-11-13T21:23:02.224886+00:00",
+        "train_loss": 0.04821196038431563,
+        "images_per_second": 31.0800630038712,
+        "completed_epochs": 6,
+        "best_specificity_at_target": 0.7184744268077602,
+        "stop_reason": "max_epochs",
+        "finished_at": "2026-11-13T21:23:02.225803+00:00"
+      },
+      "has_completed_epoch": true
+    }
+  ],
+  "skipped": [],
+  "split_sha256": {
+    "train": "ccfe25c7e7bd5935bb19ae583a218ca271bcf012d31886bf4ffdaefdf89488df",
+    "val": "00699426f7ccbd4eb142c0f0be4e71e1c8370b5527aa4cd19638544cea27e908",
+    "test": "4633332bad09df8c97a0e24bf45361537f593a7ba93d637d58644be6a22c0f1d"
+  },
+  "runner_sha256": "11f22b1d448fc678d6234b52eaae0cce0f7194477030debdf97176bb8bae8600",
+  "current_run": "stable_bce_320_seed42",
+  "updated_at": "2026-11-13T21:23:16.548993+00:00",
+  "finished_at": "2026-11-13T21:23:18.980690+00:00",
+  "test_inference_performed": false
+}

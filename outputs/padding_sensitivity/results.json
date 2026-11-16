@@ -1,0 +1,103 @@
+{
+  "state": "completed",
+  "validation_only": true,
+  "new_independent_test": false,
+  "training_performed": false,
+  "frozen_threshold": 0.009880644269287586,
+  "threshold_retuned": false,
+  "images": 4620,
+  "replay_max_absolute_error": 0.0,
+  "valid_content_pixels_unchanged_for_all_images": true,
+  "protected_files_unchanged": true,
+  "no_padding_images": 24,
+  "results": [
+    {
+      "mode": "original",
+      "auroc": 0.8955840052070211,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.7705026455026455,
+      "precision": 0.06803939122649955,
+      "f1": 0.12656119900083265,
+      "confusion_matrix": [
+        [
+          3495,
+          1041
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.009880644269287586,
+      "zero_division": 0,
+      "changed_predictions": 0,
+      "fp_to_tn": 0,
+      "tn_to_fp": 0,
+      "fn_to_tp": 0,
+      "tp_to_fn": 0,
+      "mean_absolute_score_change": 0.0,
+      "median_absolute_score_change": 0.0,
+      "p95_absolute_score_change": 0.0,
+      "max_absolute_score_change": 0.0
+    },
+    {
+      "mode": "image_mean",
+      "auroc": 0.8951562106324011,
+      "sensitivity": 0.8690476190476191,
+      "specificity": 0.8002645502645502,
+      "precision": 0.0745658835546476,
+      "f1": 0.13734713076199437,
+      "confusion_matrix": [
+        [
+          3630,
+          906
+        ],
+        [
+          11,
+          73
+        ]
+      ],
+      "threshold": 0.009880644269287586,
+      "zero_division": 0,
+      "changed_predictions": 186,
+      "fp_to_tn": 159,
+      "tn_to_fp": 24,
+      "fn_to_tp": 0,
+      "tp_to_fn": 3,
+      "mean_absolute_score_change": 0.0028495912407853954,
+      "median_absolute_score_change": 0.0003600433119572699,
+      "p95_absolute_score_change": 0.01436818949878216,
+      "max_absolute_score_change": 0.11691732704639435
+    },
+    {
+      "mode": "reflect",
+      "auroc": 0.8750131225329639,
+      "sensitivity": 0.9523809523809523,
+      "specificity": 0.6626984126984127,
+      "precision": 0.049689440993788817,
+      "f1": 0.09445100354191263,
+      "confusion_matrix": [
+        [
+          3006,
+          1530
+        ],
+        [
+          4,
+          80
+        ]
+      ],
+      "threshold": 0.009880644269287586,
+      "zero_division": 0,
+      "changed_predictions": 645,
+      "fp_to_tn": 76,
+      "tn_to_fp": 565,
+      "fn_to_tp": 4,
+      "tp_to_fn": 0,
+      "mean_absolute_score_change": 0.009604216852147004,
+      "median_absolute_score_change": 0.002346639783354476,
+      "p95_absolute_score_change": 0.04197054002434019,
+      "max_absolute_score_change": 0.6950263790786266
+    }
+  ],
+  "completed_at": "2026-11-16T07:34:44.681031+00:00"
+}

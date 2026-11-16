@@ -1,0 +1,11 @@
+{
+  "state": "running",
+  "phase": "training",
+  "pid": 38327,
+  "started_at": "2026-11-16T09:20:40.452782+00:00",
+  "current_run": "stable_bce_224_seed42_padding_mean25",
+  "training_deadline_unix": 1794828940.451354,
+  "absolute_deadline_unix": 1794829840.451354,
+  "test_inference_performed": false,
+  "worker_pid": 38334
+}

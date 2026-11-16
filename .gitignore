@@ -8,7 +8,7 @@ venv/
 .env
 .env.*
 data/
-outputs/
+# Experiment reports and figures in outputs/ are versioned; weights remain ignored.
 *.pt
 *.pth
 *.zip

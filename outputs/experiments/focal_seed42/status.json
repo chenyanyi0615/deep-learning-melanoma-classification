@@ -1,0 +1,40 @@
+{
+  "state": "completed",
+  "phase": "finished",
+  "pid": 93095,
+  "started_at": "2026-11-13T09:19:31.840173+00:00",
+  "device": "mps",
+  "loss": "focal",
+  "max_epochs": 10,
+  "epoch": 7,
+  "batch": 550,
+  "total_batches": 578,
+  "train_loss_so_far": 0.006839107182990327,
+  "images_per_second": 23.230312420650655,
+  "updated_at": "2026-11-13T11:31:38.336363+00:00",
+  "completed_epochs": 7,
+  "best_validation_auroc": 0.844209288653733,
+  "validation_metrics": {
+    "auroc": 0.7980468421936676,
+    "sensitivity": 0.0,
+    "specificity": 1.0,
+    "precision": 0.0,
+    "f1": 0.0,
+    "confusion_matrix": [
+      [
+        4536,
+        0
+      ],
+      [
+        84,
+        0
+      ]
+    ],
+    "threshold": 0.5,
+    "zero_division": 0,
+    "loss": 0.008436921296880109
+  },
+  "test_evaluated": false,
+  "stop_reason": "early_stopping",
+  "finished_at": "2026-11-13T11:31:55.724914+00:00"
+}

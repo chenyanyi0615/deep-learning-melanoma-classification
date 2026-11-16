@@ -1,0 +1,10 @@
+{
+  "protected_files_checked": 18,
+  "all_protected_hashes_match": true,
+  "original_model_restorable": true,
+  "completed_epochs": 5,
+  "best_epoch": 2,
+  "training_seconds": 2858.749932,
+  "worker_exit_code": -15,
+  "post_training_exit_cleanup": true
+}

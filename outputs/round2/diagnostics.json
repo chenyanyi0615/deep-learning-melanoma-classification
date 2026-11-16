@@ -1,0 +1,23 @@
+{
+  "validation_only": true,
+  "curves": {
+    "bce_seed42": {
+      "best_auroc": 0.8607121861090115,
+      "last_auroc": 0.836406630553456
+    },
+    "weighted_bce_seed42": {
+      "best_auroc": 0.8623630007558579,
+      "last_auroc": 0.8216831485680692
+    },
+    "focal_seed42": {
+      "best_auroc": 0.844209288653733,
+      "last_auroc": 0.7980468421936676
+    }
+  },
+  "hypotheses": [
+    "Original best checkpoints occur early; more epochs alone have not improved validation AUROC.",
+    "Batch size 8 and rare positives motivate testing frozen BatchNorm statistics and moderate positive resampling.",
+    "These are hypotheses, not proven diagnoses or guarantees of improvement."
+  ],
+  "baseline_validation_false_negatives": 8
+}

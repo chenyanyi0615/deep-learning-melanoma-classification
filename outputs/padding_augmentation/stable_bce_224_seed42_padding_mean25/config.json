@@ -1,0 +1,15 @@
+{
+  "name": "stable_bce_224_seed42_padding_mean25",
+  "loss": "bce",
+  "sample_positive_fraction": null,
+  "seed": 42,
+  "image_size": 224,
+  "epochs": 8,
+  "minutes_cap": 135,
+  "deadline_unix": 1794828940.451354,
+  "train_manifest_sha256": "ccfe25c7e7bd5935bb19ae583a218ca271bcf012d31886bf4ffdaefdf89488df",
+  "val_manifest_sha256": "00699426f7ccbd4eb142c0f0be4e71e1c8370b5527aa4cd19638544cea27e908",
+  "checkpoint_selection": "specificity at validation sensitivity >=90%, AUROC tie-breaker",
+  "padding_mean_probability": 0.25,
+  "validation_original_padding": true
+}

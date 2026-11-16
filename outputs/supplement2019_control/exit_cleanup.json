@@ -1,0 +1,6 @@
+{
+  "training_completed_before_cleanup": true,
+  "reason": "Completed worker remained alive over six minutes after final status; release supervisor to generate report",
+  "worker_pid": 32757,
+  "signal": "SIGTERM"
+}

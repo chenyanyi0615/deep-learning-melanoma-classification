@@ -1,0 +1,14 @@
+{
+  "state": "running",
+  "phase": "validation",
+  "started_at": "2026-11-16T09:20:44.898966+00:00",
+  "pid": 38334,
+  "epoch": 7,
+  "batch": 2915,
+  "total_batches": 2915,
+  "updated_at": "2026-11-16T11:20:14.063975+00:00",
+  "train_loss": 0.04421785759626707,
+  "images_per_second": 23.27096343135553,
+  "completed_epochs": 6,
+  "best_specificity_at_target": 0.7921075837742504
+}

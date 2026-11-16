@@ -1,0 +1,16 @@
+{
+  "state": "completed",
+  "phase": "finished",
+  "started_at": "2026-11-13T19:52:06.975160+00:00",
+  "pid": 7451,
+  "epoch": 6,
+  "batch": 2915,
+  "total_batches": 2915,
+  "updated_at": "2026-11-13T21:23:02.224886+00:00",
+  "train_loss": 0.04821196038431563,
+  "images_per_second": 31.0800630038712,
+  "completed_epochs": 6,
+  "best_specificity_at_target": 0.7184744268077602,
+  "stop_reason": "max_epochs",
+  "finished_at": "2026-11-13T21:23:02.225803+00:00"
+}

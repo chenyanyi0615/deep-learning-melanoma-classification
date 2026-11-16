@@ -1,0 +1,7 @@
+{
+  "protected_hashes_match": true,
+  "valid_pixels_unchanged": true,
+  "negative_control_images": 24,
+  "original_predictions_exactly_reproduced": true,
+  "script_sha256": "0f1bed19ce2523eb464ffe1a63d368478463289c3d72b7a7076a5a0b8c61aa29"
+}

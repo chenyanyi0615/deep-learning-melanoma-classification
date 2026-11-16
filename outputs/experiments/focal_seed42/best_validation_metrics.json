@@ -1,0 +1,21 @@
+{
+  "epoch": 4,
+  "auroc": 0.844209288653733,
+  "sensitivity": 0.0,
+  "specificity": 1.0,
+  "precision": 0.0,
+  "f1": 0.0,
+  "confusion_matrix": [
+    [
+      4536,
+      0
+    ],
+    [
+      84,
+      0
+    ]
+  ],
+  "threshold": 0.5,
+  "zero_division": 0,
+  "loss": 0.007859354662871213
+}

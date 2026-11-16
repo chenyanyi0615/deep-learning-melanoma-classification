@@ -1,0 +1,12 @@
+{
+  "state": "completed",
+  "phase": "finished",
+  "started_at": "2026-11-16T07:29:37.173054+00:00",
+  "pid": 37561,
+  "images_processed": 4620,
+  "total_images": 4620,
+  "updated_at": "2026-11-16T07:34:34.172164+00:00",
+  "seconds": 296.11472958297236,
+  "finished_at": "2026-11-16T07:34:46.017923+00:00",
+  "results_saved": true
+}

@@ -1,0 +1,10 @@
+group,value,images,patients,benign,melanoma,tn,fp,fn,tp,fp_patients,melanoma_patients,false_positive_rate,sensitivity
+source_padding,"Department of Dermatology, Hospital Clínic de Barcelona | 15-30%",551,44,537,14,326,211,2,12,34,13,0.3929236499068901,0.8571428571428571
+source_padding,"Department of Dermatology, Hospital Clínic de Barcelona | 30-45%",382,29,366,16,249,117,1,15,26,13,0.319672131147541,0.9375
+source_padding,Memorial Sloan Kettering Cancer Center | 15-30%,320,76,298,22,92,206,0,22,73,18,0.6912751677852349,1.0
+source_padding,Memorial Sloan Kettering Cancer Center | 30-45%,1368,76,1362,6,1170,192,1,5,43,6,0.14096916299559473,0.8333333333333334
+source_padding,"Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital, Pascale Guitera | 0-15%",24,18,16,8,2,14,0,8,12,6,0.875,1.0
+source_padding,"Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital, Pascale Guitera | 15-30%",12,7,11,1,0,11,0,1,6,1,1.0,1.0
+source_padding,"Sydney Melanoma Diagnostic Center at Royal Prince Alfred Hospital, Pascale Guitera | 30-45%",290,62,277,13,74,203,0,13,60,11,0.7328519855595668,1.0
+source_padding,"The University of Queensland Diamantina Institute, The University of Queensland, Dermatology Research Centre | 30-45%",1152,53,1151,1,1129,22,1,0,14,1,0.019113814074717638,0.0
+source_padding,"ViDIR Group, Department of Dermatology, Medical University of Vienna | 30-45%",521,52,518,3,453,65,3,0,29,3,0.12548262548262548,0.0
