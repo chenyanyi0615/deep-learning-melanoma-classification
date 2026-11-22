@@ -1,0 +1,94 @@
+{
+  "results": {
+    "\u51bb\u7ed3\u9aa8\u5e72\uff0b\u56fe\u50cf\u5206\u7c7b\u5934": {
+      "epoch": 12,
+      "auroc": 0.9003658562190308,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.7555114638447972,
+      "precision": 0.06413502109704641,
+      "f1": 0.11977935382190702,
+      "confusion_matrix": [
+        [
+          3427,
+          1109
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.010761532001197338,
+      "zero_division": 0,
+      "ap": 0.18146492012396967,
+      "accuracy": 0.7582251082251082,
+      "completed_epochs": 12
+    },
+    "\u51bb\u7ed3\u9aa8\u5e72\uff0b\u56fe\u50cf\u548c\u5143\u6570\u636e": {
+      "epoch": 12,
+      "auroc": 0.904704165616864,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.7409611992945326,
+      "precision": 0.060751398880895285,
+      "f1": 0.11385767790262172,
+      "confusion_matrix": [
+        [
+          3361,
+          1175
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.00924275815486908,
+      "zero_division": 0,
+      "ap": 0.19491240365033302,
+      "accuracy": 0.7439393939393939,
+      "completed_epochs": 12
+    },
+    "\u539f\u5355\u6a21\u578b seed42": {
+      "auroc": 0.8972348198538673,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.7921075837742504,
+      "precision": 0.0745829244357213,
+      "f1": 0.13780598368087035,
+      "confusion_matrix": [
+        [
+          3593,
+          943
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.011566944420337677,
+      "zero_division": 0,
+      "ap": 0.17028824445368543,
+      "accuracy": 0.7941558441558442
+    },
+    "\u53cc ResNet \u7b49\u6743\u96c6\u6210": {
+      "auroc": 0.8996362433862434,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.8062169312169312,
+      "precision": 0.07958115183246073,
+      "f1": 0.14629451395572665,
+      "confusion_matrix": [
+        [
+          3657,
+          879
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.012845922727137804,
+      "zero_division": 0,
+      "ap": 0.16025624018746487,
+      "accuracy": 0.808008658008658
+    }
+  },
+  "validation_only": true,
+  "baseline_replay_max_absolute_error": 5.960464477539063e-08
+}

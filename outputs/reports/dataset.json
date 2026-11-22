@@ -1,0 +1,76 @@
+{
+  "seed": 42,
+  "metadata_sha256": "a1c7c97c59e5f49232dfe3b6f6817efaaee5dbf9bcb4ce584c1889e641be5c4e",
+  "split_unit": "patient",
+  "requested_patient_ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "stratification": "patient maximum target",
+  "rows": 32701,
+  "patients": 2056,
+  "raw_rows": 33126,
+  "duplicate_rows_removed": 425,
+  "duplicates_sha256": "ddfd6c2d42430bd3581f3b2116bdb1433462a7109c715a02bf7f51115fcfabce",
+  "official_duplicate_pairs_remaining": 0,
+  "columns": [
+    "image_name",
+    "patient_id",
+    "lesion_id",
+    "sex",
+    "age_approx",
+    "anatom_site_general_challenge",
+    "diagnosis",
+    "benign_malignant",
+    "target",
+    "image_path"
+  ],
+  "missing_values": {
+    "image_name": 0,
+    "patient_id": 0,
+    "lesion_id": 0,
+    "sex": 41,
+    "age_approx": 44,
+    "anatom_site_general_challenge": 526,
+    "diagnosis": 0,
+    "benign_malignant": 0,
+    "target": 0,
+    "image_path": 0
+  },
+  "target_counts": {
+    "0": 32120,
+    "1": 581
+  },
+  "missing_images": 0,
+  "all_images_verified": true,
+  "training_ready": true,
+  "patient_overlap": 0,
+  "splits": {
+    "train": {
+      "images": 23318,
+      "patients": 1439,
+      "positives": 415,
+      "positive_rate": 0.017797409726391628,
+      "patient_fraction": 0.6999027237354085,
+      "image_fraction": 0.7130668786887251
+    },
+    "val": {
+      "images": 4620,
+      "patients": 308,
+      "positives": 84,
+      "positive_rate": 0.01818181818181818,
+      "patient_fraction": 0.14980544747081712,
+      "image_fraction": 0.14128008317788446
+    },
+    "test": {
+      "images": 4763,
+      "patients": 309,
+      "positives": 82,
+      "positive_rate": 0.01721604031072853,
+      "patient_fraction": 0.1502918287937743,
+      "image_fraction": 0.14565303813339042
+    }
+  },
+  "note": "Ratios apply to patients; image ratios and positive rates can differ. Only officially listed duplicate pairs checked; no pixel hash audit yet."
+}

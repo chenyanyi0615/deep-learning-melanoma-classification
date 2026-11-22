@@ -2,6 +2,8 @@
 
 生物医学工程小组项目：SIIM-ISIC 2020、PyTorch、ResNet-50。
 
+[周一汇报材料](outputs/README.md) · [四模型最终结果](outputs/final_internal_test/中文测试报告.md) · [现场 demo](melanoma_demo/README.md)
+
 ## 当前进度
 
 完成环境检查、官方训练元数据下载、官方重复图像清单下载，以及患者级划分程序。

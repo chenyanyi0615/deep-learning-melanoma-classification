@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Melanoma screening · Case review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f3eb;color:#172e2c;font:16px "Inter",Arial,sans-serif}main{max-width:1350px;margin:auto;padding:clamp(14px,3vw,42px)}header,.actions,nav,.title{display:flex;align-items:center;gap:12px}header{justify-content:space-between;border-bottom:2px solid #163c38;padding-bottom:16px}h1{font:500 clamp(28px,3vw,48px) Georgia,serif;margin:0;letter-spacing:-.03em}button{font:inherit;font-weight:600;cursor:pointer;border:1px solid #a9b7ae;border-radius:7px;padding:10px 16px;background:#fff;color:#163c38}button[aria-pressed=true],#run{background:#174e46;color:white}button:disabled{opacity:.45;cursor:default}.layout{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.55fr);gap:clamp(16px,3vw,44px);margin:20px 0}figure{margin:0}.photo{width:100%;height:clamp(210px,43vh,470px);object-fit:contain;background:#252c2a;border-radius:10px}figcaption{display:flex;gap:20px;flex-wrap:wrap;padding-top:9px}small,.sub{display:block;color:#50635c;font-size:14px;margin:4px 0}.meta{font-weight:600}.results{display:grid;gap:5px}.row{background:white;padding:9px 15px;border-radius:7px;border:1px solid #d4d9d0}.row:first-child{background:#dfebe2;border:1px solid #8aa998;padding:14px}.title{justify-content:space-between;flex-wrap:wrap;gap:4px}.decision{font-weight:bold}.numbers{font:14px ui-monospace,monospace;margin-top:5px}.outcome{font-weight:bold;color:#146447}.error{color:#993d22}footer{border-top:1px solid #b4bfb7;padding-top:12px}.actions{flex-wrap:wrap}#truth{font-weight:bold;font-size:19px}details{margin-top:10px;color:#40574f}summary{cursor:pointer}h2{font-size:18px;margin:0 0 10px}.status{min-height:18px;margin:4px 0} @media(max-width:720px){header{align-items:flex-start;flex-direction:column}.layout{grid-template-columns:1fr}.photo{height:260px}nav{gap:4px}}
+.branches{display:grid;grid-template-columns:1fr 1fr 1.14fr;gap:8px}.branch{background:#fff;border:1px solid #c6d3c9;border-radius:8px;padding:12px}.branch b{display:block;font-size:clamp(16px,1.8vw,25px);margin-top:12px;font-variant-numeric:tabular-nums}.fusion{background:#153c37;color:white;border-radius:12px;padding:18px 22px;margin:12px 0}.fusion h2{color:#cae6d6}.big{display:block;font-size:clamp(34px,4vw,58px);font-variant-numeric:tabular-nums;font-weight:650}.math{font:clamp(13px,1.45vw,21px) ui-monospace,monospace}.verdict{background:white;border:1px solid #bccdc1;border-radius:10px;padding:15px 20px}.verdict strong{font-size:28px;display:block;margin-top:6px}.ready .branch,.ready .fusion,.ready .verdict{animation:appear .35s both}.ready .fusion{animation-delay:.2s}.ready .verdict{animation-delay:.4s}@keyframes appear{from{opacity:.25;transform:translateY(4px)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.ready *{animation:none!important}}@media(max-width:600px){.branches{grid-template-columns:1fr}.branch b{margin:0}.branch{padding:8px}}
+.verdict{transition:background-color .55s ease,border-color .55s ease,color .55s ease}
+.verdict[data-result="correct"]{background-color:#d9f4df;border-color:#36804c;color:#15572b}
+.verdict[data-result="incorrect"]{background-color:#fbe0de;border-color:#b84742;color:#832c28}
+@media(prefers-reduced-motion:reduce){.verdict{transition:none}}
+</style><main><header><h1>Melanoma fusion model</h1><nav aria-label="Select case"></nav></header>
+<div class="layout"><figure><h2 id="caseTitle">Dermoscopy</h2><img class="photo" id="photo" alt="Selected dermoscopic image"><figcaption id="meta"></figcaption></figure>
+<section id="calculation"><h2>Branch scores</h2><div class="branches">
+<div class="branch">Image ResNet<small>Seed 42 · image only</small><b id="seed42">—</b></div>
+<div class="branch">Image ResNet<small>Seed 43 · image only</small><b id="seed43">—</b></div>
+<div class="branch">Image + metadata<small>Seed 42 features + age, sex, site</small><b id="metadata">—</b></div></div>
+<div class="fusion"><h2>Ensemble score · equal weights</h2><div class="math" id="formula"></div><strong class="big" id="ensemble"></strong></div>
+<div class="verdict" id="verdict"><h2>Model prediction</h2><div class="math" id="decisionRule"></div><strong id="prediction"></strong></div></section></div>
+<footer><div class="actions"><button id="run">Run fusion</button><button id="reveal">Reveal label</button><span id="truth" aria-live="polite"></span></div><div class="sub status" id="status" role="status"></div><details><summary>Compare models</summary><div class="results" id="results"></div></details></footer></main>
+<script>
+const el=id=>document.getElementById(id), names={fusion:'Final fusion model',single:'Single image ResNet',double:'Dual image ResNet',metadata:'ResNet + metadata'};
+let current,version=0,scores=null;
+async function read(path){const r=await fetch(path);if(!r.ok)throw Error('Request failed');return r.json()}
+function draw(label=null){
+ const values=['seed42','seed43','metadata'].map(key=>{
+   const value=scores?scores.branches[key].toFixed(6):'—';
+   el(key).textContent=value;
+   return value;
+ });
+ const fusion=scores?.fusion;
+ el('formula').textContent=fusion?'('+values.join(' + ')+') ÷ 3 ≈':'(image 42 + image 43 + image & metadata) ÷ 3';
+ el('ensemble').textContent=fusion?fusion.score.toFixed(6):'—';
+ el('decisionRule').textContent=fusion?fusion.score.toFixed(6)+(fusion.flagged?' ≥ ':' < ')+fusion.threshold.toFixed(8)+' (frozen threshold)':'Frozen threshold · 0.01359096';
+ el('prediction').textContent=fusion?(fusion.flagged?'Positive':'Negative'):'Awaiting inference';
+ const verdict=el('verdict');
+ if(label===null || !fusion){
+   delete verdict.dataset.result;
+ }else{
+   verdict.dataset.result=fusion.flagged===Boolean(label)?'correct':'incorrect';
+ }
+ el('calculation').classList.toggle('ready',Boolean(fusion));
+ el('results').replaceChildren();for(const [key,name] of Object.entries(names)){
+ const value=scores?.[key],box=document.createElement('div');box.className='row';
+ const decision=value?(value.flagged?'Positive':'Negative'):'Awaiting inference';
+ const outcome=label===null?'':(value.flagged?(label?'Correct detection':'False positive'):(label?'Missed melanoma':'Correct exclusion'));
+ box.innerHTML='<div class="title"><strong>'+name+'</strong><span class="decision">'+decision+'</span></div>'+(value?'<div class="numbers">Score '+value.score.toFixed(6)+' · Threshold '+value.threshold.toFixed(6)+'</div>':'')+(outcome?'<div class="outcome '+(Boolean(label)!==value.flagged?'error':'')+'">'+outcome+'</div>':'');el('results').append(box)}}
+async function select(key){const token=++version;current=key;scores=null;draw();el('status').textContent='';el('truth').textContent='';el('meta').replaceChildren();el('run').disabled=true;el('reveal').disabled=true;document.querySelector('details').open=false;el('photo').src='/image/'+key;el('caseTitle').textContent='Case '+key+' · Dermoscopy';for(const b of document.querySelectorAll('nav button'))b.setAttribute('aria-pressed',b.dataset.key===key);
+ try{const data=await read('/case/'+key);if(token!==version)return;for(const [title,v] of Object.entries({Age:data.age_approx?Number(data.age_approx):'Unknown',Sex:data.sex,Site:data.anatom_site_general_challenge})){const item=document.createElement('div');item.className='meta';const caption=document.createElement('small');caption.textContent=title;item.append(caption,v||'Unknown');el('meta').append(item)}el('run').disabled=false}catch{if(token===version)el('status').textContent='Case unavailable. Select the case again.'}}
+el('run').onclick=async()=>{const token=++version;el('run').disabled=true;el('reveal').disabled=true;scores=null;draw();el('truth').textContent='';el('status').textContent='Running local inference…';try{const result=await read('/predict/'+current);if(token!==version)return;scores=result;draw();el('status').textContent='';el('reveal').disabled=false}catch{if(token===version)el('status').textContent='Inference failed. Please retry.'}finally{if(token===version)el('run').disabled=false}};
+el('reveal').onclick=async()=>{const token=version;try{const label=await read('/label/'+current);if(token!==version)return;draw(label);const positive=scores.fusion.flagged;el('truth').textContent='Ground truth: '+(label?'Melanoma':'Benign')+' · '+(label?(positive?'True positive':'False negative'):(positive?'False positive':'True negative'));el('reveal').disabled=true}catch{if(token===version)el('status').textContent='Label unavailable. Please retry.'}};
+for(const key of 'ABC'){const b=document.createElement('button');b.textContent='Case '+key;b.dataset.key=key;b.onclick=()=>select(key);document.querySelector('nav').append(b)}select('A');
+</script></html>
