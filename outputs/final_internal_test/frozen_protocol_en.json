@@ -1,0 +1,124 @@
+{
+  "splits": {
+    "train": "ccfe25c7e7bd5935bb19ae583a218ca271bcf012d31886bf4ffdaefdf89488df",
+    "val": "00699426f7ccbd4eb142c0f0be4e71e1c8370b5527aa4cd19638544cea27e908",
+    "test": "4633332bad09df8c97a0e24bf45361537f593a7ba93d637d58644be6a22c0f1d"
+  },
+  "file_sha256": {
+    "outputs/padding_augmentation/stable_bce_224_seed42_padding_mean25/best_weights.pt": "623bfc5c59858a56355e71af43585f4f5c4d0ae0959580efafc52736a9f948d5",
+    "outputs/padding_seed43_repeat/stable_bce_224_seed43_padding_mean25/best_weights.pt": "08f6b3d08fe09f2ab974e750e9d6f05292cb24a7898c8750870d9f91fe4ce523",
+    "outputs/metadata_fusion/image_metadata/best_head.pt": "942b28efef43526da925ec9cb9ad27ff2b85feaef7d4e31684b3bed5728c1a2b",
+    "outputs/padding_augmentation/stable_bce_224_seed42_padding_mean25/best_validation_predictions.csv": "8e645f9d09c06546b2ff2fe16f769ea5a3d26acf258576364a6e88d30016a943",
+    "outputs/padding_seed43_repeat/stable_bce_224_seed43_padding_mean25/best_validation_predictions.csv": "3566ac7311163570bc097656d23c86158f55cd5069297a23ee9c9e8c03cd3e5f",
+    "outputs/metadata_fusion/image_metadata/validation_predictions.csv": "8ee5bb7bf4ce9eaeb417411afb80c3a43412f3aaa1c333ae701eede7c2158b6b",
+    "data/raw/train.csv": "a1c7c97c59e5f49232dfe3b6f6817efaaee5dbf9bcb4ce584c1889e641be5c4e",
+    "outputs/metadata_fusion/config.json": "8ccd6cf39b2e669464236f7bc10a8c6d2c52f2a284467978f4deec571df20a0d"
+  },
+  "equal_weight_branches": {
+    "Dual ResNet + metadata (primary)": [
+      "seed42",
+      "seed43",
+      "meta"
+    ],
+    "Padding-augmented ResNet": [
+      "seed42"
+    ],
+    "Image-only dual ResNet": [
+      "seed42",
+      "seed43"
+    ],
+    "Single ResNet + metadata": [
+      "meta"
+    ]
+  },
+  "primary": "Dual ResNet + metadata (primary)",
+  "main_comparator": "Image-only dual ResNet",
+  "validation": {
+    "Dual ResNet + metadata (primary)": {
+      "auroc": 0.9051267111782985,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.8048941798941799,
+      "precision": 0.07908428720083246,
+      "f1": 0.14545454545454545,
+      "confusion_matrix": [
+        [
+          3651,
+          885
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.0135909608307573,
+      "zero_division": 0,
+      "accuracy": 0.8067099567099567,
+      "ap": 0.18584566886707155
+    },
+    "Padding-augmented ResNet": {
+      "auroc": 0.8972348198538673,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.7921075837742504,
+      "precision": 0.0745829244357213,
+      "f1": 0.13780598368087035,
+      "confusion_matrix": [
+        [
+          3593,
+          943
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.011566944420337677,
+      "zero_division": 0,
+      "accuracy": 0.7941558441558442,
+      "ap": 0.17028824445368543
+    },
+    "Image-only dual ResNet": {
+      "auroc": 0.8996362433862434,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.8062169312169312,
+      "precision": 0.07958115183246073,
+      "f1": 0.14629451395572665,
+      "confusion_matrix": [
+        [
+          3657,
+          879
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.012845922727137804,
+      "zero_division": 0,
+      "accuracy": 0.808008658008658,
+      "ap": 0.16025624018746487
+    },
+    "Single ResNet + metadata": {
+      "auroc": 0.904704165616864,
+      "sensitivity": 0.9047619047619048,
+      "specificity": 0.7409611992945326,
+      "precision": 0.060751398880895285,
+      "f1": 0.11385767790262172,
+      "confusion_matrix": [
+        [
+          3361,
+          1175
+        ],
+        [
+          8,
+          76
+        ]
+      ],
+      "threshold": 0.00924275815486908,
+      "zero_division": 0,
+      "accuracy": 0.7439393939393939,
+      "ap": 0.19491240365033302
+    }
+  },
+  "decision": "mean predicted probability >= frozen validation threshold",
+  "frozen_at": "2026-11-21T04:26:17.176637+00:00"
+}
